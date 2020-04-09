@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Elm Layout</title>
+    <style>
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('Gilroy-Light.eot');
+            src: local('Gilroy Light'), local('Gilroy-Light'),
+                url('/static/fonts/gilroy/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+                url('/static/fonts/gilroy/Gilroy-Light.woff') format('woff'),
+                url('/static/fonts/gilroy/Gilroy-Light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('Gilroy-Medium.eot');
+            src: local('Gilroy Medium'), local('Gilroy-Medium'),
+                url('/static/fonts/gilroy/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+                url('/static/fonts/gilroy/Gilroy-Medium.woff') format('woff'),
+                url('/static/fonts/gilroy/Gilroy-Medium.ttf') format('truetype');
+            font-weight: 600;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Garamond';
+            src: local('Garamond Regular'), local('Garamond-Regular'),
+                url('/static/fonts/garamond/EBGaramond-Regular.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+        }
+        body { margin: 0px }
+        body::-webkit-scrollbar { width: 0 !important }
+        body { overflow: -moz-scrollbars-none; }
+        body { -ms-overflow-style: none; }
+    </style>
+</head>
+
+<body>
+    <script src="/static/elm.js"></script>
+    <script>
+        var app = Elm.Main.init({
+            flags: {
+                x: window.innerWidth,
+                y: window.innerHeight,
+                ua: window.navigator.userAgent,
+            },
+
+            node: document.querySelector('body')
+        })
+    </script>
+</body>
+
+</html>
